@@ -324,6 +324,10 @@ p {
   color: currentColor;
 }
 
+.modal > p {
+  text-align: center;
+}
+
 /*----COMMON SECTIONS HEADER----*/
 
 .section-header {
