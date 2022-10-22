@@ -30,7 +30,11 @@
         <nav class="header-nav">
           <ul class="header-list-main list">
             <li class="header-list-main-item">
-              <a href="./index.html" class="header-link-main link">Студія</a>
+              <a
+                href="./index.html"
+                class="header-link-main link header-active-page"
+                >Студія</a
+              >
             </li>
             <li class="header-list-main-item">
               <a href="./portfolio.html" class="header-link-main link"
@@ -68,7 +72,25 @@
       <section class="hero">
         <div class="container">
           <h1 class="hero-title">Ефективні рішення для <br />вашого бізнесу</h1>
-          <button type="button" class="hero-btn">Замовити послугу</button>
+          <button type="button" class="hero-btn" data-modal-open>
+            Замовити послугу
+          </button>
+        </div>
+
+        <!-- MODAL WINDOW -->
+
+        <div class="backdrop is-hidden" data-modal>
+          <div class="modal">
+            <p>
+              Я модальне вікно! <br />
+              Закрий мене!
+            </p>
+            <button data-modal-close class="modal-btn">
+              <svg width="11" height="11" class="modal-btn-icon">
+                <use href="./images/icons.svg#icon-close"></use>
+              </svg>
+            </button>
+          </div>
         </div>
       </section>
 
@@ -142,6 +164,7 @@
                 height="294"
                 class="activity-list-image"
               />
+              <h3 class="activity-list-hdr">Десктопні додатки</h3>
             </li>
             <li class="activity-list-item">
               <img
@@ -151,6 +174,7 @@
                 height="294"
                 class="activity-list-image"
               />
+              <h3 class="activity-list-hdr">Мобільні додатки</h3>
             </li>
             <li class="activity-list-item">
               <img
@@ -160,6 +184,7 @@
                 height="294"
                 class="activity-list-image"
               />
+              <h3 class="activity-list-hdr">Дизайнерські рішення</h3>
             </li>
           </ul>
         </div>
@@ -457,5 +482,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
