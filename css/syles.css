@@ -272,7 +272,7 @@ p {
 
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(1);
 
   min-width: 528px;
   min-height: 581px;
@@ -287,12 +287,15 @@ p {
   align-items: center;
   justify-content: center;
 
-  scale: 1;
-  transition: scale 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 1;
+
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-hidden .modal {
-  scale: 0.9;
+  transform: translate(-50%, -50%) scale(0.9);
+  opacity: 0;
 }
 
 .modal-btn {
@@ -309,19 +312,11 @@ p {
   border-radius: 50%;
   background-color: transparent;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  fill: rgba(0, 0, 0, 0.1);
   cursor: pointer;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.modal-btn:hover {
-  fill: var(--accent-text-color);
-  border-color: var(--blue-button-color);
 }
 
 .modal-btn-icon {
-  color: currentColor;
+  fill: var(--black-text-color);
 }
 
 .modal > p {
